@@ -6,6 +6,10 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
+//Assets
+import recreational_drone from './assets/images/recreational-drone.jpg';
+import fumigation_drone from './assets/images/fumigation-drone.jpg';
+import competitiom_drone from './assets/images/competition-drone.jpg';
 
 export default function App() {
  
@@ -36,7 +40,7 @@ export default function App() {
           <div class="container d-flex justify-content-between align-items-center">
 
               <a class="navbar-brand text-success logo h1 align-self-center" href="#">
-                  Jassa
+                  DronesUN
               </a>
 
               <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -116,11 +120,11 @@ export default function App() {
                   <div class="container">
                       <div class="row p-5">
                           <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                              <img class="img-fluid" src="https://therichpost.com/wp-content/uploads/2021/05/banner_img_01.jpg" alt="" />
+                              <img class="img-fluid" src={competitiom_drone} alt="" />
                           </div>
                           <div class="col-lg-6 mb-0 d-flex align-items-center">
                               <div class="text-align-left align-self-center">
-                                  <h1 class="h1 text-success"><b>Jassa</b> eCommerce</h1>
+                                  <h1 class="h1 text-success"><b>DronesUN</b> eCommerce</h1>
                                   <h3 class="h2">Lorem Ipsum Lorem Ipsum</h3>
                                   <p>
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -136,7 +140,7 @@ export default function App() {
                   <div class="container">
                       <div class="row p-5">
                           <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                              <img class="img-fluid" src="https://therichpost.com/wp-content/uploads/2021/05/banner_img_02.jpg" alt="" />
+                              <img class="img-fluid" src={fumigation_drone} alt="" />
                           </div>
                           <div class="col-lg-6 mb-0 d-flex align-items-center">
                               <div class="text-align-left">
@@ -156,7 +160,7 @@ export default function App() {
                   <div class="container">
                       <div class="row p-5">
                           <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                              <img class="img-fluid" src="https://therichpost.com/wp-content/uploads/2021/05/banner_img_03.jpg" alt="" />
+                              <img class="img-fluid" src={recreational_drone} alt="" />
                           </div>
                           <div class="col-lg-6 mb-0 d-flex align-items-center">
                               <div class="text-align-left">
@@ -184,7 +188,7 @@ export default function App() {
         <section class="container py-5">
           <div class="row text-center pt-3">
               <div class="col-lg-6 m-auto">
-                  <h1 class="h1">Categories of The Month</h1>
+                  <h1 class="h1">Drone categories</h1>
                   <p>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
@@ -194,18 +198,18 @@ export default function App() {
           </div>
           <div class="row">
               <div class="col-12 col-md-4 p-5 mt-3">
-                  <a href="#"><img src="https://therichpost.com/wp-content/uploads/2021/05/category_img_01.jpg" class="rounded-circle img-fluid border" /></a>
-                  <h5 class="text-center mt-3 mb-3">Watches</h5>
+                  <a href="#"><img src={competitiom_drone} class="rounded-circle img-fluid border" /></a>
+                  <h5 class="text-center mt-3 mb-3">Competition</h5>
                   <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
               </div>
               <div class="col-12 col-md-4 p-5 mt-3">
-                  <a href="#"><img src="https://therichpost.com/wp-content/uploads/2021/05/category_img_02.jpg" class="rounded-circle img-fluid border" /></a>
-                  <h2 class="h5 text-center mt-3 mb-3">Shoes</h2>
+                  <a href="#"><img src={fumigation_drone} class="rounded-circle img-fluid border" /></a>
+                  <h2 class="h5 text-center mt-3 mb-3">Fumigation</h2>
                   <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
               </div>
               <div class="col-12 col-md-4 p-5 mt-3">
-                  <a href="#"><img src="https://therichpost.com/wp-content/uploads/2021/05/category_img_03.jpg" class="rounded-circle img-fluid border" /></a>
-                  <h2 class="h5 text-center mt-3 mb-3">Accessories</h2>
+                  <a href="#"><img src={recreational_drone} class="rounded-circle img-fluid border" /></a>
+                  <h2 class="h5 text-center mt-3 mb-3">Recreational</h2>
                   <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
               </div>
           </div>
@@ -227,7 +231,7 @@ export default function App() {
                   <div class="col-12 col-md-4 mb-4">
                       <div class="card h-100">
                           <a href="#">
-                              <img src="https://therichpost.com/wp-content/uploads/2021/05/feature_prod_01.jpg" class="card-img-top" alt="..." />
+                              <img src={competitiom_drone} class="card-img-top" alt="..." />
                           </a>
                           <div class="card-body">
                               <ul class="list-unstyled d-flex justify-content-between">
@@ -240,7 +244,7 @@ export default function App() {
                                   </li>
                                   <li class="text-muted text-right">$240.00</li>
                               </ul>
-                              <a href="#" class="h2 text-decoration-none text-dark">Lorem Ipsum</a>
+                              <a href="#" class="h2 text-decoration-none text-dark">Competition drone</a>
                               <p class="card-text">
                                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.
                               </p>
@@ -251,7 +255,7 @@ export default function App() {
                   <div class="col-12 col-md-4 mb-4">
                       <div class="card h-100">
                           <a href="#">
-                              <img src="https://therichpost.com/wp-content/uploads/2021/05/feature_prod_02.jpg" class="card-img-top" alt="..." />
+                              <img src={fumigation_drone} class="card-img-top" alt="..." />
                           </a>
                           <div class="card-body">
                               <ul class="list-unstyled d-flex justify-content-between">
@@ -264,7 +268,7 @@ export default function App() {
                                   </li>
                                   <li class="text-muted text-right">$480.00</li>
                               </ul>
-                              <a href="#" class="h2 text-decoration-none text-dark">Lorem Ipsum</a>
+                              <a href="#" class="h2 text-decoration-none text-dark">Fumigation drone</a>
                               <p class="card-text">
                                 Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum
                               </p>
@@ -275,7 +279,7 @@ export default function App() {
                   <div class="col-12 col-md-4 mb-4">
                       <div class="card h-100">
                           <a href="#">
-                              <img src="https://therichpost.com/wp-content/uploads/2021/05/feature_prod_03.jpg" class="card-img-top" alt="..." />
+                              <img src={recreational_drone} class="card-img-top" alt="..." />
                           </a>
                           <div class="card-body">
                               <ul class="list-unstyled d-flex justify-content-between">
@@ -288,7 +292,7 @@ export default function App() {
                                   </li>
                                   <li class="text-muted text-right">$360.00</li>
                               </ul>
-                              <a href="#" class="h2 text-decoration-none text-dark">Lorem Ipsum</a>
+                              <a href="#" class="h2 text-decoration-none text-dark">Recreational drone</a>
                               <p class="card-text">
                                 Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum.
                               </p>
