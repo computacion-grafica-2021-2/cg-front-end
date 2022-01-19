@@ -2,7 +2,7 @@
   "name": "cg-web",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://computacion-grafica-2021-2s.github.io/cg-web/",
+  "homepage": "https://dronesun.tk/",
   "dependencies": {
     "@popperjs/core": "^2.11.2",
     "@testing-library/jest-dom": "^5.16.1",
