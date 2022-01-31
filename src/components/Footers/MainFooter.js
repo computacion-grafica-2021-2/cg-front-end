@@ -176,7 +176,7 @@ const MainFooter = () => {
               <p class="text-left text-light">
                 Copyright &copy; 2021 Company Name | Designed by{" "}
                 <a rel="sponsored" href="#" target="_blank">
-                  Jassa
+                  CG-UN
                 </a>
               </p>
             </div>
