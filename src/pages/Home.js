@@ -7,13 +7,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
 //Assets
-import recreational_drone from './assets/images/recreational-drone.jpg';
-import fumigation_drone from './assets/images/fumigation-drone.jpg';
-import competitiom_drone from './assets/images/competition-drone.jpg';
+import recreational_drone from '../assets/images/recreational-drone.jpg';
+import fumigation_drone from '../assets/images/fumigation-drone.jpg';
+import competitiom_drone from '../assets/images/competition-drone.jpg';
 
 //Components
-import MainFooter from './components/Footers/MainFooter';
-import MainNav from './components/Navbars/MainNav';
+import MainFooter from '../components/Footers/MainFooter';
+import MainNav from '../components/Navbars/MainNav';
 
 export default function Home() {
  
