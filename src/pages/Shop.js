@@ -17,7 +17,7 @@ import MainNav from '../components/Navbars/MainNav';
 import ProductCard from '../components/Products/ProductCard';
 
 //Api
-import getProducts from '../api/api';
+import { getProducts, getProduct } from '../api/api';
 
 export default class Shop extends React.Component {
 
@@ -25,19 +25,16 @@ export default class Shop extends React.Component {
         productCards: []
     };
 
-    componentDidMount() {
-        getProducts().then(res => {
-            console.log('Products:', res.data);
-            var _productCards = res.data.map(function (product, i) {
-                return <ProductCard name={product.name} photoUrl={product.photoUrl} key={i} />
-            })
-            console.log(_productCards);
+    async componentDidMount() {
+        var _productCards = [];
+        var products = await getProducts();
+        for (const product of products.data) {
+            var { data } = await getProduct(product._id);
+            _productCards.push(<ProductCard data={data} />)
             this.setState({
                 productCards: _productCards
             })
-        }).catch(err => {
-            console.error(err);
-        })
+        }
     }
 
 

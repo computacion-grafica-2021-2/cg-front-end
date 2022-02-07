@@ -3,12 +3,12 @@ import axios from 'axios';
 
 const API_URL = ApiUrl;
 
-async function getProducts() {
+export async function getProducts() {
     const res = await axios.get(API_URL + '/api/v1/products/all');
     return res.data;
 }
 
-async function getProduct(id) {
+export async function getProduct(id) {
     const res = await axios.get(API_URL + '/api/v1/products/' + id);
     return res.data;
 }
@@ -23,5 +23,3 @@ getProducts().then(res => {
         }).catch(err => console.log(err))
     }
 }).catch(err => { console.log(err) });
-
-export default getProducts;
