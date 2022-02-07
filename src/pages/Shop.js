@@ -17,24 +17,25 @@ import MainNav from '../components/Navbars/MainNav';
 import ProductCard from '../components/Products/ProductCard';
 
 //Api
-import { getProducts, getProduct } from '../api/api';
+import { getProducts } from '../api/api';
 
 export default class Shop extends React.Component {
 
     state = {
-        productCards: []
+        productCards: [],
+        loadingProducts: <div class="text-center mt-5"><h1 class="h1">Loading products...</h1></div>
     };
 
     async componentDidMount() {
         var _productCards = [];
         var products = await getProducts();
-        for (const product of products.data) {
-            var { data } = await getProduct(product._id);
-            _productCards.push(<ProductCard data={data} />)
-            this.setState({
-                productCards: _productCards
-            })
+        for (const product of products) {
+            console.log(product);
+            _productCards.push(<ProductCard product={product} key={product.id}/>)
         }
+        this.setState({
+            productCards: _productCards
+        });
     }
 
 
@@ -71,7 +72,7 @@ export default class Shop extends React.Component {
                             </div>
                         </div>
                         <div class="row">
-                            {this.state.productCards}
+                            {this.state.productCards.length > 0 ? this.state.productCards : this.state.loadingProducts}
                         </div>
                     </div>
                 </section>
