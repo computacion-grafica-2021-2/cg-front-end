@@ -33,7 +33,7 @@ const MainNav = () => {
             <div class="flex-fill">
               <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="/">
                     Home
                   </a>
                 </li>
@@ -43,7 +43,7 @@ const MainNav = () => {
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="/shop">
                     Shop
                   </a>
                 </li>
