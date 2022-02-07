@@ -1,9 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import "primereact/resources/themes/saga-green/theme.css";  //theme
+import "primereact/resources/primereact.min.css";                  //core css
+import "primeicons/primeicons.css";
+import 'primeflex/primeflex.css';
 import './index.css';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
+import About from './pages/About';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -16,6 +21,10 @@ ReactDOM.render(
       <Route
         path="/shop"
         element={<Shop />}
+      />
+      <Route
+        path="/about"
+        element={<About />}
       />
     </Routes>
   </BrowserRouter>,

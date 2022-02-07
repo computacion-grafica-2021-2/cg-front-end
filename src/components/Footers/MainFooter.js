@@ -12,7 +12,7 @@ const MainFooter = () => {
             <ul class="list-unstyled text-light footer-link-list">
               <li>
                 <i class="fas fa-map-marker-alt fa-fw"></i>
-                Colombia
+                Bogotá, Colombia
               </li>
               <li>
                 <i class="fa fa-phone fa-fw"></i>
@@ -23,7 +23,7 @@ const MainFooter = () => {
               <li>
                 <i class="fa fa-envelope fa-fw"></i>
                 <a class="text-decoration-none" href="#">
-                  info@company.com
+                  info@drones.tk
                 </a>
               </li>
             </ul>
@@ -35,38 +35,23 @@ const MainFooter = () => {
             </h2>
             <ul class="list-unstyled text-light footer-link-list">
               <li>
-                <a class="text-decoration-none" href="#">
-                  Luxury
+                <a class="text-decoration-none" href="/shop">
+                  Cargo Drones
                 </a>
               </li>
               <li>
-                <a class="text-decoration-none" href="#">
-                  Sport Wear
+                <a class="text-decoration-none" href="/shop">
+                  Speed Drones
                 </a>
               </li>
               <li>
-                <a class="text-decoration-none" href="#">
-                  Men's Shoes
+                <a class="text-decoration-none" href="/shop">
+                  Record Drones
                 </a>
               </li>
               <li>
-                <a class="text-decoration-none" href="#">
-                  Women's Shoes
-                </a>
-              </li>
-              <li>
-                <a class="text-decoration-none" href="#">
-                  Popular Dress
-                </a>
-              </li>
-              <li>
-                <a class="text-decoration-none" href="#">
-                  Gym Accessories
-                </a>
-              </li>
-              <li>
-                <a class="text-decoration-none" href="#">
-                  Sport Shoes
+                <a class="text-decoration-none" href="/shop">
+                  Low Cost Drones
                 </a>
               </li>
             </ul>
@@ -78,7 +63,7 @@ const MainFooter = () => {
             </h2>
             <ul class="list-unstyled text-light footer-link-list">
               <li>
-                <a class="text-decoration-none" href="#">
+                <a class="text-decoration-none" href="/">
                   Home
                 </a>
               </li>

@@ -9,7 +9,7 @@ const MainNav = () => {
         <div class="container d-flex justify-content-between align-items-center">
           <a
             class="navbar-brand text-success logo h1 align-self-center"
-            href="#"
+            href="/"
           >
             DronesUN
           </a>
@@ -38,7 +38,7 @@ const MainNav = () => {
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="/about">
                     About
                   </a>
                 </li>

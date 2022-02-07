@@ -1,32 +1,66 @@
+import React, { useState } from 'react';
+import { Dialog } from 'primereact/dialog';
+import { Button } from 'primereact/button';
+import ProductDialog from './ProductDialog';
+
 const ProductCard = (props) => {
+    const [displayProduct, setDisplayProduct] = useState(false);
+    const dialogFuncMap = {'displayProduct': setDisplayProduct}
+    
+    const onClick = (name, position) => {
+        dialogFuncMap[`${name}`](true);
+    }
+
+    const onHide = (name) => {
+        dialogFuncMap[`${name}`](false);
+    }
+
+    const renderFooter = (name) => {
+        return (
+            <div>
+                <Button label="Cancelar" icon="pi pi-times" onClick={() => onHide(name)} className="p-button-text" />
+                <Button label="Agregar al carrito" icon="pi pi-shopping-cart" onClick={() => onHide(name)} autoFocus />
+            </div>
+        );
+    }
+    
     var product = props.product;
+    let dialogHeader = 'Dron de '+product.name;
     return (
-        <div class="col-12 col-md-4 mb-4">
-            <div class="card h-100 rounded-lg">
+        <div className="col-12 col-md-4 mb-4">
+            <div className="card h-100 rounded-lg" onClick={() => onClick('displayProduct')}>
                 <a href="#">
-                    <img class="rounded-top-lg w-100" src={product.photoUrl || 'invalid url'} alt="Drone image" />
+                    <img className="rounded-top-lg w-100" src={product.photoUrl || 'invalid url'} alt="Drone image" />
                 </a>
-                <div class="card-body">
-                    <ul class="list-unstyled d-flex justify-content-between">
+                <div className="card-body">
+                    <ul className="list-unstyled d-flex justify-content-between">
                         <li>
-                            <i class="text-warning fa fa-star"></i>
-                            <i class="text-warning fa fa-star"></i>
-                            <i class="text-warning fa fa-star"></i>
-                            <i class="text-muted fa fa-star"></i>
-                            <i class="text-muted fa fa-star"></i>
+                            <i className="text-warning fa fa-star"></i>
+                            <i className="text-warning fa fa-star"></i>
+                            <i className="text-warning fa fa-star"></i>
+                            <i className="text-muted fa fa-star"></i>
+                            <i className="text-muted fa fa-star"></i>
                         </li>
-                        <li class="text-muted text-right">{product.price || 'Drone price'}</li>
+                        <li className="text-muted text-right">{product.price || 'Drone price'}</li>
                     </ul>
-                    <a href="#" class="h2 text-decoration-none text-dark">{product.name || 'Drone name'}</a>
-                    <p class="card-text">
+                    <a href="#" className="h2 text-decoration-none text-dark">{product.name || 'Drone name'}</a>
+                    <p className="card-text">
                         {product.description || 'Drone description'}
                     </p>
-                    <p class="text-muted">Stock ({product.stock || 0})</p>
+                    <p className="text-muted">Stock ({product.stock || 0})</p>
                 </div>
             </div>
+            <Dialog
+                header={dialogHeader}
+                visible={displayProduct}
+                style={{ width: '50vw' }}
+                footer={renderFooter('displayProduct')}
+                onHide={() => onHide('displayProduct')}
+            >
+                <ProductDialog id={product.id} />
+            </Dialog>
         </div>
     )
-
 }
 
 export default ProductCard;
