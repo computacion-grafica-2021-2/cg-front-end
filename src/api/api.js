@@ -1,4 +1,7 @@
-const API_URL = 'https://cg-backend-api.herokuapp.com';
+import { ApiUrl } from '../config/default';
+import axios from 'axios';
+
+const API_URL = ApiUrl;
 
 async function getProducts() {
     const res = await axios.get(API_URL + '/api/v1/products/all');
@@ -21,4 +24,4 @@ getProducts().then(res => {
     }
 }).catch(err => { console.log(err) });
 
-console.log(products);
+export default getProducts;
