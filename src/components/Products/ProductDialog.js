@@ -1,4 +1,5 @@
 import React from 'react';
+import { Image } from 'primereact/image';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 
 const ProductDialog = (props) => {
@@ -8,8 +9,8 @@ const ProductDialog = (props) => {
         <div>
             <Splitter style={{height: '180%', border: 'none'}} className="mb-1">
                 <SplitterPanel className="flex align-items-center justify-content-center">
-                    <img
-                        class="rounded-lg"
+                    <Image
+                        class="rounded-top-lg"
                         src={product.photoUrl} 
                         alt="Image"
                         width="100%"
