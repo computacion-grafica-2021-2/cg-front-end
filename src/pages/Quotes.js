@@ -50,6 +50,7 @@ export default function Quotes() {
 
   const onSubmit = (data) => {
     setFormData(data);
+    postQuote(params.id,data);
     setShowMessage(true);
 
     reset();
@@ -157,10 +158,10 @@ export default function Quotes() {
                       className="pi pi-check-circle"
                       style={{ fontSize: "5rem", color: "var(--green-500)" }}
                     ></i>
-                    <h5>Registration Successful!</h5>
+                    <h5>Quote Successful!</h5>
                     <p style={{ lineHeight: 1.5, textIndent: "1rem" }}>
                       Your quote is registered under name <b>{formData.name}</b>{" "}
-                      ; it'll be valid next 30 days without activation. Please
+                      . Please
                       check <b>{formData.email}</b> for activation instructions.
                     </p>
                   </div>
@@ -275,6 +276,7 @@ export default function Quotes() {
                         </span>
                         {getFormErrorMessage("idnumber")}
                       </div>
+                        <Button type="submit" label="Submit" icon="pi pi-check" autoFocus />
                     </form>
                   </div>
                 </div>
@@ -283,10 +285,9 @@ export default function Quotes() {
                 <Button
                   label="Back"
                   icon="pi pi-arrow-left"
-                  className="p-button-text mr-5"
+                  className="p-button-text mt-5"
                 />
               </a>
-              <Button label="Submit" icon="pi pi-check" autoFocus />
             </div>
             <div class="col-lg-4 my-5 text-center">
               <img

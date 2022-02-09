@@ -13,16 +13,16 @@ export async function getProduct(id) {
     return res.data;
 }
 
-export async function postQuote(id,name,email,idnumber,type) {
+export async function postQuote(id,data) {
     const res = await axios.post(API_URL + '/api/v1/pricequotes/' + id, {
         "pricequote": {
-            "name": name,
-            "email": email,
+            "name": data.name,
+            "email": data.email,
             "idnumber": {
-                "value": idnumber,
-                "type": type
+                "value": data.idnumber,
+                "type": data.type.name
             }
         }
-    });
+    }).then(console.log("success"));
     return res.data;
 } 
