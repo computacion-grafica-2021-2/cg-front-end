@@ -77,18 +77,18 @@ export default class Home extends React.Component {
                     </div>
                     <div class="row">
                         <div class="col-12 col-md-4 p-5 mt-3">
-                            <a href="#"><img src={competitiom_drone} class="rounded-circle img-fluid border" /></a>
-                            <h5 class="text-center mt-3 mb-3">Competition</h5>
+                            <img src={competitiom_drone} class="rounded-circle img-fluid border" />
+                            <h5 class="text-center mt-3 mb-3">Competition Drones</h5>
                             <p class="text-center"><a class="btn btn-success" href='/shop'>Go Shop</a></p>
                         </div>
                         <div class="col-12 col-md-4 p-5 mt-3">
                             <a href="#"><img src={fumigation_drone} class="rounded-circle img-fluid border" /></a>
-                            <h2 class="h5 text-center mt-3 mb-3">Fumigation</h2>
+                            <h2 class="h5 text-center mt-3 mb-3">Cargo Drones</h2>
                             <p class="text-center"><a class="btn btn-success" href='/shop'>Go Shop</a></p>
                         </div>
                         <div class="col-12 col-md-4 p-5 mt-3">
-                            <a href="#"><img src={recreational_drone} class="rounded-circle img-fluid border" /></a>
-                            <h2 class="h5 text-center mt-3 mb-3">Recreational</h2>
+                            <img src={recreational_drone} class="rounded-circle img-fluid border" />
+                            <h2 class="h5 text-center mt-3 mb-3">Low Cost Drones</h2>
                             <p class="text-center"><a class="btn btn-success" href='/shop'>Go Shop</a></p>
                         </div>
                     </div>

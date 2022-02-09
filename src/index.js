@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import Shop from './pages/Shop';
 import About from './pages/About';
 import Detail from './pages/Detail';
+import Quote from './pages/Quotes';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -30,6 +31,10 @@ ReactDOM.render(
       <Route
         path="/detail/:id"
         element={<Detail />}>
+      </Route>
+      <Route
+        path="/quote/:id"
+        element={<Quote />}>
       </Route>
     </Routes>
   </BrowserRouter>,

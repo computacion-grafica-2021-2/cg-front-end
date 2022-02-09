@@ -68,17 +68,17 @@ const MainFooter = () => {
                 </a>
               </li>
               <li>
-                <a class="text-decoration-none" href="#">
+                <a class="text-decoration-none" href="/about">
                   About Us
                 </a>
               </li>
               <li>
-                <a class="text-decoration-none" href="#">
+                <a class="text-decoration-none" href="/shop">
                   Shop Locations
                 </a>
               </li>
               <li>
-                <a class="text-decoration-none" href="#">
+                <a class="text-decoration-none" href="/about">
                   FAQs
                 </a>
               </li>

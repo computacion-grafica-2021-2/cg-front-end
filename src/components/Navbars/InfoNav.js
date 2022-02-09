@@ -7,7 +7,7 @@ const InfoNav = () => {
               <div class="w-100 d-flex justify-content-between">
                   <div>
                       <i class="fa fa-envelope mx-2"></i>
-                      <a class="navbar-sm-brand text-light text-decoration-none" href="#">info@company.com</a>
+                      <a class="navbar-sm-brand text-light text-decoration-none" href="#">info@dronesun.tk</a>
                       <i class="fa fa-phone mx-2"></i>
                       <a class="navbar-sm-brand text-light text-decoration-none" href="#">010-000-0000</a>
                   </div>

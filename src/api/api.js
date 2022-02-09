@@ -12,3 +12,17 @@ export async function getProduct(id) {
     const res = await axios.get(API_URL + '/api/v1/products/' + id);
     return res.data;
 }
+
+export async function postQuote(id,name,email,idnumber,type) {
+    const res = await axios.post(API_URL + '/api/v1/pricequotes/' + id, {
+        "pricequote": {
+            "name": name,
+            "email": email,
+            "idnumber": {
+                "value": idnumber,
+                "type": type
+            }
+        }
+    });
+    return res.data;
+} 

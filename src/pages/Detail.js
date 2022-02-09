@@ -9,6 +9,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 //Components
 import MainFooter from '../components/Footers/MainFooter';
 import MainNav from '../components/Navbars/MainNav';
+import { Button } from 'primereact/button';
 
 //Api
 import { getProduct } from '../api/api';
@@ -68,6 +69,8 @@ export default function Detail() {
                                     <h4><b>Price: </b>${product ? product.price : 'Loading...'}</h4>
                                 </div>
                             </div>
+                            <a href="/shop"><Button label="Back" icon="pi pi-arrow-left" className="p-button-text mr-5" /></a>
+                            <a href={'/quote/'+params.id}><Button label="Send a Quote" icon="pi pi-info-circle" autoFocus /></a>
                         </div>
                         <div class="col-lg-4 my-5 text-center">
                             <h1 class="text-success">{product ? product.name : 'Loading...'}</h1>

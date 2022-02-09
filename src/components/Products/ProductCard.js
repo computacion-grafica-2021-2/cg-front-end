@@ -16,10 +16,11 @@ const ProductCard = (props) => {
     }
 
     const renderFooter = (name) => {
+        let quoteUrl = '/quote/' + product._id;
         return (
             <div>
-                <Button label="Cancelar" icon="pi pi-times" onClick={() => onHide(name)} className="p-button-text" />
-                <Button label="Agregar al carrito" icon="pi pi-shopping-cart" onClick={() => onHide(name)} autoFocus />
+                <Button label="Back" icon="pi pi-arrow-left" onClick={() => onHide(name)} className="p-button-text" />
+                <a href={quoteUrl}><Button label="Send a Quote" icon="pi pi-info-circle"  autoFocus /></a>
             </div>
         );
     }
