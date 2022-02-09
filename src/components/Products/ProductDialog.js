@@ -10,7 +10,6 @@ const ProductDialog = (props) => {
             <Splitter style={{height: '180%', border: 'none'}} className="mb-1">
                 <SplitterPanel className="flex align-items-center justify-content-center">
                     <Image
-                        class="rounded-top-lg"
                         src={product.photoUrl} 
                         alt="Image"
                         width="100%"
