@@ -4,6 +4,7 @@ import { Splitter, SplitterPanel } from 'primereact/splitter';
 
 const ProductDialog = (props) => {
     var product = props.product;
+    const detailsUrl = '/detail/' + product._id;
 
     return(
         <div>
@@ -23,6 +24,7 @@ const ProductDialog = (props) => {
                         </li>
                         <li>
                             <p>{product.description}</p>
+                            <a href={detailsUrl}>More details and specifications</a>
                         </li>
                         <li>
                             <p><b>Category:</b> {product.category}</p>

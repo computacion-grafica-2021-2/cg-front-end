@@ -9,6 +9,7 @@ import './index.css';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
 import About from './pages/About';
+import Detail from './pages/Detail';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -26,6 +27,10 @@ ReactDOM.render(
         path="/about"
         element={<About />}
       />
+      <Route
+        path="/detail/:id"
+        element={<Detail />}>
+      </Route>
     </Routes>
   </BrowserRouter>,
   document.getElementById('root')

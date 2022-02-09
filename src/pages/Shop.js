@@ -25,8 +25,7 @@ export default class Shop extends React.Component {
         var _productCards = [];
         var products = await getProducts();
         for (const product of products) {
-            console.log(product);
-            _productCards.push(<ProductCard product={product} key={product.id}/>)
+            _productCards.push(<ProductCard product={product} key={product._id}/>)
         }
         this.setState({
             productCards: _productCards
