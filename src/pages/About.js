@@ -1,6 +1,5 @@
 import React from 'react';
 import MainNav from '../components/Navbars/MainNav';
-import InfoNav from '../components/Navbars/InfoNav';
 import MainFooter from '../components/Footers/MainFooter';
 import { Card } from 'primereact/card';
 

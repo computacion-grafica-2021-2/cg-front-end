@@ -25,7 +25,6 @@ const ProductCard = (props) => {
     }
     
     var product = props.product;
-    let dialogHeader = 'Dron de '+product.name;
     return (
         <div className="col-12 col-md-4 mb-4">
             <div className="card h-100 rounded-lg" onClick={() => onClick('displayProduct')}>
@@ -51,13 +50,12 @@ const ProductCard = (props) => {
                 </div>
             </div>
             <Dialog
-                header={dialogHeader}
                 visible={displayProduct}
                 style={{ width: '50vw' }}
                 footer={renderFooter('displayProduct')}
                 onHide={() => onHide('displayProduct')}
             >
-                <ProductDialog id={product.id} />
+                <ProductDialog product={product} />
             </Dialog>
         </div>
     )

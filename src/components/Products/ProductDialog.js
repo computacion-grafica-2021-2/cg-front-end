@@ -1,53 +1,37 @@
-import React, {useState, useEffect} from 'react';
-import { Image } from 'primereact/image';
+import React from 'react';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
-import { getProduct } from '../../api/api';
 
-const ProductDialog = ({id}) => {
-    const [product, setProduct] = useState([]);
+const ProductDialog = (props) => {
+    var product = props.product;
 
-    async function loadProductInfo() {
-        var productInfo = await getProduct(id);
-        console.log(productInfo);
-        setProduct(productInfo.data);
-    }
-
-    /*const specsInfo = product.specs.map((info,i) => {
-        return(
-            <li><p>{product.specs[i].name}: {product.specs[i].value}</p></li>
-        ); 
-    });*/
-
-    useEffect(() => {
-        loadProductInfo();
-    });
     return(
         <div>
-            <Splitter style={{height: '300px'}} className="mb-5">
+            <Splitter style={{height: '180%', border: 'none'}} className="mb-1">
                 <SplitterPanel className="flex align-items-center justify-content-center">
-                    <Image
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Autumn_Drone_%28cropped%29.jpg/1280px-Autumn_Drone_%28cropped%29.jpg" 
+                    <img
+                        class="rounded-lg"
+                        src={product.photoUrl} 
                         alt="Image"
-                        width="400rm"
+                        width="100%"
                         preview
                     />
                 </SplitterPanel>
                 <SplitterPanel className="flex align-items-center justify-content-center">
                     <ul className="list-unstyled">
                         <li>
-                            <h6>Dron de {product.name}</h6>
+                            <h3>Dron de {product.name}</h3>
                         </li>
                         <li>
-                            <p className="text-light">{product.description}</p>
+                            <p>{product.description}</p>
                         </li>
                         <li>
-                            <p>Category: {product.category}</p>
+                            <p><b>Category:</b> {product.category}</p>
                         </li>
                         <li>
-                            <p>Price: $ {product.price}</p>
+                            <p><b>Price:</b> $ {product.price}</p>
                         </li>
                         <li>
-                            <p>Stock: {product.stock}</p>
+                            <p><b>Stock:</b> {product.stock}</p>
                         </li>
                     </ul>
                 </SplitterPanel>
