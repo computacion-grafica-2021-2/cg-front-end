@@ -50,7 +50,7 @@ export default function Quotes() {
 
   const onSubmit = (data) => {
     setFormData(data);
-    postQuote(params.id,data);
+    postQuote(params.id, data);
     setShowMessage(true);
 
     reset();
@@ -136,7 +136,7 @@ export default function Quotes() {
       <section class="bg-light">
         <div class="container py-5">
           <div class="row py-3">
-            <div class="col-lg-5 mx-5 of-scroll text-center">
+            <div class="col-lg-5 mx-5 text-center">
               <h1 class="mb-5">Send a Quote</h1>
               <p>Dron de {product ? product.name : "Loading..."}</p>
               <p>
@@ -147,22 +147,20 @@ export default function Quotes() {
                 <Dialog
                   visible={showMessage}
                   onHide={() => setShowMessage(false)}
-                  position="top"
+                  position="center"
                   footer={dialogFooter}
                   showHeader={false}
                   breakpoints={{ "960px": "80vw" }}
                   style={{ width: "30vw" }}
                 >
-                  <div className="flex justify-content-center flex-column pt-6 px-3">
+                  <div className="flex justify-content-center text-center flex-column pt-6 px-3">
                     <i
-                      className="pi pi-check-circle"
+                      className="pi pi-check-circle mb-5"
                       style={{ fontSize: "5rem", color: "var(--green-500)" }}
                     ></i>
                     <h5>Quote Successful!</h5>
                     <p style={{ lineHeight: 1.5, textIndent: "1rem" }}>
-                      Your quote is registered under name <b>{formData.name}</b>{" "}
-                      . Please
-                      check <b>{formData.email}</b> for activation instructions.
+                      Your quote is registered under name <b>{formData.name}</b>. Please check <b>{formData.email}</b> for quote details.
                     </p>
                   </div>
                 </Dialog>
@@ -276,7 +274,7 @@ export default function Quotes() {
                         </span>
                         {getFormErrorMessage("idnumber")}
                       </div>
-                        <Button type="submit" label="Submit" icon="pi pi-check" autoFocus />
+                      <Button type="submit" label="Submit" icon="pi pi-check" autoFocus />
                     </form>
                   </div>
                 </div>

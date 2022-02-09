@@ -54,7 +54,7 @@ export default function Detail() {
             <section class="bg-light">
                 <div class="container py-5">
                     <div class="row py-3">
-                        <div class="col-lg-5 mx-5 of-scroll text-center">
+                        <div class="col-lg-5 mx-5 text-center">
                             <h1 class="mb-5">Details and specs</h1>
                             <p>
                                 {product ? product.description : 'Loading...'}
