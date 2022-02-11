@@ -14,6 +14,7 @@ export async function getProduct(id) {
 }
 
 export async function postQuote(id,data) {
+    console.log(data.type.name)
     const res = await axios.post(API_URL + '/api/v1/pricequotes/' + id, {
         "pricequote": {
             "name": data.name,

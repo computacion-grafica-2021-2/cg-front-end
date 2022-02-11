@@ -36,9 +36,9 @@ export default function Quotes() {
   };
 
   const options = [
-    { name: "Cedula Ciudadanía" },
-    { name: "Tarjeta de Identidad" },
-    { name: "Cedula Extranjería" },
+    { name: "C.C." },
+    { name: "C.E." },
+    { name: "NIT" },
   ];
 
   const {
