@@ -69,9 +69,8 @@ export default class Home extends React.Component {
                         <div class="col-lg-6 m-auto">
                             <h1 class="h1">Drone categories</h1>
                             <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                <strong>DronesUN </strong>offers many kinds of drone models to any kind of necessity, which are available
+                                within the very specific components you always wanted.
                             </p>
                         </div>
                     </div>
@@ -100,9 +99,7 @@ export default class Home extends React.Component {
                             <div class="col-lg-6 m-auto">
                                 <h1 class="h1">Featured Product</h1>
                                 <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    Check out the latest Drone models!
                                 </p>
                             </div>
                         </div>
