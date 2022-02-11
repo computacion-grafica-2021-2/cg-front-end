@@ -1,8 +1,8 @@
 import React from 'react';
 //Assets
-import recreational_drone from '../../assets/images/recreational-drone.jpg';
-import fumigation_drone from '../../assets/images/fumigation-drone.jpg';
-import competitiom_drone from '../../assets/images/competition-drone.jpg';
+import cargo_drone from '../../assets/images/cargo-drone.jpg';
+import recording_drone from '../../assets/images/recording-drone.jpg';
+import competitiom_drone from '../../assets/images/speed-drone.jpg';
 
 const HomeHeader = () => {
   return (
@@ -55,7 +55,7 @@ const HomeHeader = () => {
           <div class="container">
             <div class="row p-5">
               <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                <img class="img-fluid" src={fumigation_drone} alt="" />
+                <img class="img-fluid" src={recording_drone} alt="" />
               </div>
               <div class="col-lg-6 mb-0 d-flex align-items-center">
                 <div class="text-align-left">
@@ -77,7 +77,7 @@ const HomeHeader = () => {
           <div class="container">
             <div class="row p-5">
               <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                <img class="img-fluid" src={recreational_drone} alt="" />
+                <img class="img-fluid" src={cargo_drone} alt="" />
               </div>
               <div class="col-lg-6 mb-0 d-flex align-items-center">
                 <div class="text-align-left">

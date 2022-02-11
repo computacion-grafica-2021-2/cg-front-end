@@ -7,9 +7,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
 //Assets
-import recreational_drone from '../assets/images/recreational-drone.jpg';
-import fumigation_drone from '../assets/images/fumigation-drone.jpg';
-import competitiom_drone from '../assets/images/competition-drone.jpg';
+import cargo_drone from '../assets/images/cargo-drone.jpg';
+import recording_drone from '../assets/images/recording-drone.jpg';
+import competitiom_drone from '../assets/images/speed-drone.jpg';
 
 //Components
 import MainFooter from '../components/Footers/MainFooter';
@@ -27,12 +27,12 @@ export default class Home extends React.Component {
         loadingFeaturedProducts: <div class="text-center mt-5"><h1 class="h1">Loading products...</h1></div>
     }
 
-    async componentDidMount(){
+    async componentDidMount() {
         const products = await getProducts();
         var _featuredProducts = [];
-        for(var i = 0; i < 3; i++){
+        for (var i = 0; i < 3; i++) {
             let index = parseInt(products.length * Math.random());
-            _featuredProducts.push(<ProductCard product={products[index]} key={products[index].id}/>);
+            _featuredProducts.push(<ProductCard product={products[index]} key={products[index].id} />);
             products.splice(index, 1);
         }
         this.setState({
@@ -61,10 +61,10 @@ export default class Home extends React.Component {
                         </form>
                     </div>
                 </div>
-                
+
                 <HomeHeader />
 
-                <section class="container py-5">
+                <section class="container pt-5">
                     <div class="row text-center pt-3">
                         <div class="col-lg-6 m-auto">
                             <h1 class="h1">Drone categories</h1>
@@ -77,22 +77,34 @@ export default class Home extends React.Component {
                     <div class="row">
                         <div class="col-12 col-md-4 p-5 mt-3">
                             <img src={competitiom_drone} class="rounded-circle img-fluid border" />
-                            <h5 class="text-center mt-3 mb-3">Competition Drones</h5>
+                            <h5 class="text-center mt-3 mb-3">Speed drones</h5>
                             <p class="text-center"><a class="btn btn-success" href='/shop'>Go Shop</a></p>
                         </div>
                         <div class="col-12 col-md-4 p-5 mt-3">
-                            <a href="#"><img src={fumigation_drone} class="rounded-circle img-fluid border" /></a>
-                            <h2 class="h5 text-center mt-3 mb-3">Cargo Drones</h2>
+                            <a href="#"><img src={recording_drone} class="rounded-circle img-fluid border" /></a>
+                            <h2 class="h5 text-center mt-3 mb-3">Recording drones</h2>
                             <p class="text-center"><a class="btn btn-success" href='/shop'>Go Shop</a></p>
                         </div>
                         <div class="col-12 col-md-4 p-5 mt-3">
-                            <img src={recreational_drone} class="rounded-circle img-fluid border" />
-                            <h2 class="h5 text-center mt-3 mb-3">Low Cost Drones</h2>
+                            <img src={cargo_drone} class="rounded-circle img-fluid border" />
+                            <h2 class="h5 text-center mt-3 mb-3">Cargo drones</h2>
                             <p class="text-center"><a class="btn btn-success" href='/shop'>Go Shop</a></p>
                         </div>
                     </div>
                 </section>
-
+                <section>
+                    <div class="row text-center">
+                        <div class="col-lg-6 m-auto">
+                            <h1 class="h1">Drone renders</h1>
+                            <p>
+                                Enjoy some high definition drone renders.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text-center pb-5">
+                        <iframe width="1120" height="630" src="https://www.youtube.com/embed/GcdDrc3Cr-I?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </section>
                 <section class="bg-light">
                     <div class="container py-5">
                         <div class="row text-center py-3">
